@@ -1,87 +1,92 @@
-# Sports Popularity Analysis and Forecasting
+# **Sports Popularity Analysis and Forecasting**
 
-## Overview
-This project analyzes and forecasts sports popularity trends using data collected from Google Trends. It employs advanced time series analysis and machine learning techniques to predict future popularity trends for various sports, including Football, Baseball, Tennis, Table Tennis, and Volleyball.
+## **📌 Overview**
+This project explores and forecasts the popularity trends of various sports using data from **Google Trends**. It applies advanced **time series analysis** and **machine learning** techniques to model and predict future trends in sports such as **Football, Baseball, Tennis, Table Tennis**, and **Volleyball**.
 
-## Dataset
-The dataset (`major_events_full_updated.csv`) is collected from Google Trends and includes:
-- Historical popularity data for multiple sports
-- Major sporting events indicators
-- YouTube views score (where available)
-- Monthly data points from 2004 onwards
+## **📂 Dataset**
+The dataset (`major_events_full_updated.csv`) is sourced from Google Trends and includes:
+- Historical monthly popularity data (from 2004 onwards)
+- Annotations of major sporting events
+- YouTube viewership scores (when available)
 
-## Features
+## **Features**
 
-### Time Series Analysis
-- Advanced ensemble forecasting combining Prophet and SARIMA models
+### 🕒 Time Series Analysis
+- Hybrid ensemble forecasting using **Prophet** and **SARIMA**
 - Anomaly detection and outlier handling
-- Seasonal trend decomposition
-- Statistical tests for stationarity
+- Seasonal-Trend decomposition (STL)
+- Stationarity tests (ADF, KPSS)
 
-### Interactive Visualization
-- Dynamic plotly-based visualizations
-- Major events highlighting with star markers
-- Confidence intervals for forecasts
-- Training vs. Test data visualization
+### 📊 Interactive Visualization
+- Dynamic **Plotly** visualizations
+- Star markers for major events
+- Forecast confidence intervals
+- Clear distinction between training and test data
 
-### Model Components
-- **Prophet Models**: Specialized models for each sport (`/Model/prophet_model_*.pkl`)
-- **SARIMA Models**: Sport-specific SARIMA models (`/Model/sarima_model_*.pkl`)
-- **Ensemble Approach**: Combines predictions from multiple models for improved accuracy
+### 🧠 Model Components
+- **Prophet Models**: Tailored per sport (`/Model/prophet_model_*.pkl`)
+- **SARIMA Models**: Built individually (`/Model/sarima_model_*.pkl`)
+- **Ensemble Strategy**: Averages model predictions for improved accuracy
 
-## Project Structure
+## **🧾 Project Structure**
 ```
 ├── DataSets/
-│   └── major_events_full_updated.csv
+│   └── major\_events\_full\_updated.csv
 ├── Model/
-│   ├── prophet_model_*.pkl
-│   └── sarima_model_*.pkl
+│   ├── prophet\_model\_*.pkl
+│   └── sarima\_model\_*.pkl
 ├── plots/
-│   ├── sports_plot.html
-│   ├── Football_plot.html
-│   └── sarima_forecast.html
+│   ├── sports\_plot.html
+│   ├── Football\_plot.html
+│   └── sarima\_forecast.html
 ├── gui.py
 └── main.ipynb
 ```
 
-## Technical Features
-- **Modern UI**: Dark-themed Streamlit interface with custom styling
-- **Data Preprocessing**: Handles missing values and outliers
-- **Model Evaluation**: Includes MAE, MSE, and R² metrics
-- **Interactive Components**: Dynamic sport selection and forecast period adjustment
+## **⚙️ Technical Highlights**
+- **Streamlit GUI**: Dark-themed UI with intuitive controls
+- **Data Cleaning**: Smart handling of missing values and outliers
+- **Evaluation Metrics**: MAE, MSE, R²
+- **Interactivity**: Choose sport and forecast duration dynamically
 
-## Dependencies
-- streamlit
-- prophet
-- pandas
-- numpy
-- plotly
-- statsmodels
-- scikit-learn
-- pmdarima
+## **🧩 Dependencies**
+```bash
+streamlit
+prophet
+pandas
+numpy
+plotly
+statsmodels
+scikit-learn
+pmdarima
+````
 
-## Usage
-To run the application:
+## **Getting Started**
 ```bash
 streamlit run gui.py
 ```
 
-## Analysis Capabilities
-- Long-term trend analysis
-- Seasonal pattern identification
-- Major event impact assessment
-- Cross-sport popularity comparison
-- Future popularity forecasting
+## **📈 Analysis Capabilities**
+* Long-term trend insights
+* Seasonality detection
+* Measuring event impact (e.g. Olympics, World Cups)
+* Comparing popularity across sports
+* Predictive modeling for future trends
 
-## Visualization Examples
-- Time series plots with confidence intervals
-- Seasonal decomposition visualizations
-- Trend comparison across different sports
-- Major events impact visualization
+## **📷 Visualization Samples**
+* Forecast plots with confidence bands
+* STL seasonal decomposition
+* Cross-sport trend comparisons
+* Impact visualization of major events
 
-## Future Improvements
-- Integration of additional data sources
-- Enhanced feature engineering
-- Real-time data updates
-- Advanced anomaly detection
-- Cross-platform compatibility
+## **Future Enhancements**
+* Adding more real-world datasets (e.g., Twitter, YouTube trends)
+* Automated real-time updates
+* Enhanced anomaly detection
+* Advanced ensemble methods
+* Cross-platform deployment (e.g., Docker, Hugging Face Spaces)
+
+---
+
+## **🙌 Contributions & Feedback**
+If you find this project helpful, feel free to star ⭐ the repo or fork it for your use. Suggestions, improvements, and pull requests are welcome!
